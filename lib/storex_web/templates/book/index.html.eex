@@ -1,0 +1,22 @@
+<h2>Books listing</h2>
+
+<section>
+	<%= inspect(@books) %>
+</section>
+
+
+<section class="book-list">
+	<ul class="grid">
+		<%= for book <- @books do %>
+			<li class="grid-item">
+				<div class="book book-small">
+					<a href="#">
+						<img class="book__image" src="<%= book.image_url %>">
+						<h2 class="book__title"><%= book.title %></h2>
+					</a>
+					<span class="book__price"><%= book.price %></span>
+				</div>
+			</li>
+		<% end %>
+	</ul>
+</section>

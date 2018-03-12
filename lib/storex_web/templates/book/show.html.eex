@@ -1,0 +1,14 @@
+<h1><%= @book.title %></h1>
+
+<div class="book book­-hero">
+	<img class="book__image" src="<%= @book.image_url %>">
+
+	<p class="book__description">
+		<%= @book.description %>
+	</p>
+</div>
+
+<div class="value­-tag">
+	<h2 class="value-­tag__title">price</h2>
+	<span class="value-­tag__content"><%= @book.price %></span>
+</div>
