@@ -1,8 +1,4 @@
-<h2>Books listing</h2>
-
-<section>
-	<%= inspect(@books) %>
-</section>
+<h1>Books listing</h1>
 
 
 <section class="book-list">
@@ -10,10 +6,11 @@
 		<%= for book <- @books do %>
 			<li class="grid-item">
 				<div class="book book-small">
-					<a href="#">
+					<%= link to: book_path(@conn, :show, book.id) do %>
 						<img class="book__image" src="<%= book.image_url %>">
 						<h2 class="book__title"><%= book.title %></h2>
-					</a>
+					<% end %>
+
 					<span class="book__price"><%= book.price %></span>
 				</div>
 			</li>
