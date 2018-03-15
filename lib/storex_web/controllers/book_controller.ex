@@ -3,11 +3,16 @@ defmodule StorexWeb.BookController do
 	alias Storex.Store
 
 	def index(conn, _params) do
-		render conn, "index.html", books: list_books()
+		render conn, "index.html", books: Store.list_books()
 	end
 
 	def show(conn, %{"id" => book_id}) do
-		render conn, "show.html", book: get_book(book_id)
+		render conn, "show.html", book: Store.get_book(book_id)
 	end
 
+  def create_book(attrs) do
+    %Book{}
+    |> Book.changeset(attrs)
+    |> Repo.insert()
+  end
 end
