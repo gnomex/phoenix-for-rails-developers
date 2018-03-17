@@ -9,10 +9,4 @@ defmodule StorexWeb.BookController do
 	def show(conn, %{"id" => book_id}) do
 		render conn, "show.html", book: Store.get_book(book_id)
 	end
-
-  def create_book(attrs) do
-    %Book{}
-    |> Book.changeset(attrs)
-    |> Repo.insert()
-  end
 end

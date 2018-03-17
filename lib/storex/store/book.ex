@@ -18,10 +18,4 @@ defmodule Storex.Store.Book do
     |> cast(attrs, [:title, :description, :price, :image_url])
     |> validate_required([:title, :description, :price, :image_url])
   end
-
-  def validate_max_price(changeset) do
-    if :price > 99.99 do
-      
-    end
-  end
 end
