@@ -12,8 +12,8 @@ config :logger, level: :warn
 # Configure your database
 config :storex, Storex.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "rubando",
+  password: "itsElixir",
   database: "storex_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
